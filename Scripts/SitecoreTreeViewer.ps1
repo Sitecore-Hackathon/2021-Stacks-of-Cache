@@ -15,7 +15,10 @@ function Show-ResultsDialog {
 	$legend = "This graph represents desired dependency determined based on item's id/path dependencies between each module."
 	$result2 = Read-Variable -Parameters `
  		@{ Name = "Info0"; Title = ""; Value = '<img src="data:image/svg+xml;base64,' + $image64 + '""/>'; editor = "info" },`
-		@{ Name = "Info1"; Title = "Legend:"; Value = '<div><div style="height: 50px; width: 50px; background-color: lightgray;">&nbsp;</div><div style="height: 50px; width: 400px;">Not Published</div></div>'; editor = "info" } `
+		@{ Name = "Info1"; Title = "Legend:"; Value = '<div> ' + `
+		    '<div style="height: 50px; width: 50px; background-color: lightgray;">&nbsp;</div>' + `
+		    '<div style="height: 50px; width: 400px;">Not Published</div></div>'; `
+		    editor = "info" } `
  		-Description $description -Title "Dependency Graph" -Width 1000 -Height 800 `
  		-CancelButtonName "Exit"
 	if ($result2 -eq "cancel") {
@@ -36,17 +39,11 @@ function ProcessChildren($parent)
         if ($isPublished -ne $true) {
             $bgColor = "lightgray"
         }
-        if ($child.__Published.Date -gt (Get-Date)) {
-            $bgColor = "lightskyblue"
-        }
         
         $isParentPublished = IsPublished($parent.Paths.FullPath)
         $parentBgColor = "white"
         if ($isParentPublished -ne $true) {
             $parentBgColor = "lightgray"
-        }
-        if ($parent.__Published.Date -gt (Get-Date)) {
-            $parentBgColor = "lightskyblue"
         }
         
         $result += "[" + $parent.Name + " {bg:" + $parentBgColor + "}]-^["+ $child.Name +" {bg:" + $bgColor + "}],"
@@ -73,11 +70,12 @@ if($result -ne "ok") {
 }
 $rootPath = $startItem.Paths.FullPath
 $itemDb = $startItem.Database
-$path = "C:\inetpub\wwwroot\App_Data\logs\test.svg"
+$path = $env:TEMP + '\test.svg'
 $uml = ""
 $item = Get-Item -Path ("{0}:{1}" -f $itemDb, $rootPath)
+
 $uml += ProcessChildren -parent $item -uml $uml
 
-Get-yUMLDiagram $uml
+Get-yUMLDiagram $uml $path
 $base64 = [convert]::ToBase64String((Get-Content $path -Encoding byte))
 Show-ResultsDialog $base64 
