@@ -1,5 +1,7 @@
 #Requires -RunAsAdministrator
 
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
 Import-Module -Name (Join-Path $PSScriptRoot "_StarterKit\tools\StarterKitCLi") -Force
 
 Show-HackLogo
