@@ -28,13 +28,41 @@ This module is created for Sitecore 10.1. It requires Sitecore Powershell Extens
 
 ## Installation instructions
 To use this module, simply install the package located at `.\installation\Sitecore_Tree_Viewer-1.zip`.
+
 Optionally, you can install the package of demo content located at `.\installation\Demo_Content-1.zip`.
+
 For additional help with installing a package in Sitecore, please visit [the Sitecore documentation for installing a package](https://doc.sitecore.com/SdnArchive/Articles/Administration/Installing%20Modules%20and%20Packages.html)
 
 ## Usage instructions
-⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
 
-Include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation.
+There are two ways to use the script: Via right-clicking an item, and by accessing it through the Desktop.
+
+### Right-clicking an item in the Content Editor
+
+After installing the package, you will be able to run the script on the item by right clicking the item, going to Scripts > Stacks of Cache > Sitecore Tree Viewer
+![images/right-click-context-menu.png]
+
+You will soon see a tree diagram of the Sitecore folder structure based on the item selected.
+![images/reverse-funnel.png]
+
+### Running the script from the Desktop
+
+You can also access the script from the Desktop by going to Reporting Tools > Powershell Reports > Stacks of Cache > Sitecore Tree Viewer
+![images/desktop-scripts.png]
+
+After clicking, you will see an item picker prompt, where you will need to select a parent item to create the tree off of.
+![images/item-picker.png]
+
+You will soon see a tree diagram of the Sitecore folder structure based on the item selected.
+![images/reverse-funnel.png]
 
 ## Comments
-Enjoy!
+
+### Future Development Considerations
+
+* Heatmaps
+  * Colored items by time last updated to show aging or stale content
+* Icons
+  * Never Publish
+  * Future Publish Date
+  * Workflow Required
