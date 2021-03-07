@@ -16,9 +16,8 @@ Best use of SPE to help Content authors and Marketers
 This UML diagram solution also gives the content editor an easy to recognize shading for items that haven't yet been published from master to web so they have confidence in what is deployed and what isn't. (edited) 
 
 ## Video link
-⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
 
-⟹ [Replace this Video link](#video-link)
+⟹ [Video of usage](https://youtu.be/Ooo4uEMlThQ)
 
 
 ## Pre-requisites and Dependencies
@@ -40,21 +39,26 @@ There are two ways to use the script: Via right-clicking an item, and by accessi
 ### Right-clicking an item in the Content Editor
 
 After installing the package, you will be able to run the script on the item by right clicking the item, going to Scripts > Stacks of Cache > Sitecore Tree Viewer
-![images/right-click-context-menu.png]
+
+![Sitecore Tree Viewer](./images/right-click-context-menu.png)
 
 You will soon see a tree diagram of the Sitecore folder structure based on the item selected.
-![images/reverse-funnel.png]
+
+![Sitecore Tree Viewer](./images/reverse-funnel.png)
 
 ### Running the script from the Desktop
 
 You can also access the script from the Desktop by going to Reporting Tools > Powershell Reports > Stacks of Cache > Sitecore Tree Viewer
-![images/desktop-scripts.png]
+
+![Sitecore Tree Viewer](./images/desktop-scripts.png)
 
 After clicking, you will see an item picker prompt, where you will need to select a parent item to create the tree off of.
-![images/item-picker.png]
+
+![Sitecore Tree Viewer](./images/item-picker.png)
 
 You will soon see a tree diagram of the Sitecore folder structure based on the item selected.
-![images/reverse-funnel.png]
+
+![Sitecore Tree Viewer](./images/reverse-funnel.png)
 
 ## Comments
 
