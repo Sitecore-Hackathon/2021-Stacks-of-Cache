@@ -27,8 +27,9 @@ This module is created for Sitecore 10.1. It requires Sitecore Powershell Extens
 
 
 ## Installation instructions
-To use this module, simply install the package located at .\installation\Sitecore_Tree_Viewer-1.zip.
-Optionally, you can install the package of demo content located at .\installation\Demo_Content-1.zip.
+To use this module, simply install the package located at `.\installation\Sitecore_Tree_Viewer-1.zip`.
+Optionally, you can install the package of demo content located at `.\installation\Demo_Content-1.zip`.
+For additional help with installing a package in Sitecore, please visit [the Sitecore documentation for installing a package](https://doc.sitecore.com/SdnArchive/Articles/Administration/Installing%20Modules%20and%20Packages.html)
 
 ## Usage instructions
 ⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
